@@ -1,58 +1,79 @@
-# Terraform AWS Projects
+# 🚀 Terraform AWS Infrastructure Projects
 
-## Project Name
+<div align="center">
 
-**WON Bills - AWS Infrastructure using Terraform**
+## 🌩️ WON Bills - AWS Infrastructure as Code (IaC)
 
-This repository contains Terraform projects for deploying AWS infrastructure using Infrastructure as Code (IaC).
+Build and Manage AWS Infrastructure using **Terraform**
 
----
+![Terraform](https://img.shields.io/badge/Terraform-v1.8+-623CE4?style=for-the-badge&logo=terraform)
+![AWS](https://img.shields.io/badge/AWS-Cloud-FF9900?style=for-the-badge&logo=amazonaws)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04-E95420?style=for-the-badge&logo=ubuntu)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-# Projects Included
-
-## 1. EC2 Project
-
-Deploys a production-ready Ubuntu EC2 server with networking and storage.
-
-Resources Created:
-
-- VPC
-- Public Subnet
-- Internet Gateway
-- Route Table
-- Route Table Association
-- Security Group
-- Ubuntu EC2 Instance
-- Elastic IP
-- EC2 Key Pair
-- Root EBS Volume (30 GB)
-- Additional EBS Volume (30 GB)
-- User Data Script
-- Outputs
+</div>
 
 ---
 
-## 2. S3 Project
+# 📖 Overview
 
-Deploys a secure S3 Bucket.
+This repository contains **production-ready Terraform projects** to provision AWS infrastructure using **Infrastructure as Code (IaC)**.
 
-Resources Created
-
-- S3 Bucket
-- Bucket Versioning
-- Server Side Encryption
-- Bucket Ownership Controls
-- Block Public Access
-- Sample Object Upload
-- Outputs
+Each project is developed independently following **Terraform Best Practices**, making it easier to learn, maintain, and deploy cloud resources.
 
 ---
 
-# Folder Structure
+# 📂 Projects Included
 
-## EC2
+| Project | Description | Status |
+|----------|-------------|--------|
+| 🖥️ EC2 | Ubuntu Server with Networking & Storage | ✅ Completed |
+| 🪣 S3 | Secure S3 Bucket with Versioning & Encryption | ✅ Completed |
+| 🌐 VPC | Production Ready Networking Infrastructure | 🚧 In Progress |
 
+---
+
+# 📁 Repository Structure
+
+```text
+terraform-office/
+│
+├── EC2/
+│
+├── S3/
+│
+├── VPC/
+│
+└── README.md
 ```
+
+---
+
+# 🖥️ EC2 Project
+
+Creates a complete Ubuntu server infrastructure.
+
+## Resources
+
+- ✅ VPC
+- ✅ Public Subnet
+- ✅ Internet Gateway
+- ✅ Route Table
+- ✅ Route Table Association
+- ✅ Security Group
+- ✅ Ubuntu 24.04 EC2
+- ✅ Elastic IP
+- ✅ EC2 Key Pair
+- ✅ Root EBS (30 GB)
+- ✅ Additional EBS (30 GB)
+- ✅ User Data Script
+- ✅ Outputs
+
+---
+
+## EC2 Folder
+
+```text
 EC2/
 │
 ├── .env
@@ -75,9 +96,25 @@ EC2/
 
 ---
 
-## S3
+# 🪣 S3 Project
 
-```
+Creates a secure Amazon S3 Bucket.
+
+## Resources
+
+- ✅ S3 Bucket
+- ✅ Versioning
+- ✅ Server Side Encryption
+- ✅ Bucket Ownership Controls
+- ✅ Public Access Block
+- ✅ Sample File Upload
+- ✅ Outputs
+
+---
+
+## S3 Folder
+
+```text
 S3/
 │
 ├── .env
@@ -97,427 +134,319 @@ S3/
 
 ---
 
-# Terraform Files Explanation
+# 🌐 VPC Project
 
-## versions.tf
+Creates a production-ready AWS Networking environment.
 
-Purpose
+## Current Resources
 
-Defines the Terraform version and required providers.
+- ✅ VPC
+- ✅ Internet Gateway
+- ✅ Public Subnet 1
+- ✅ Public Subnet 2
+- ✅ Private Subnet 1
+- ✅ Private Subnet 2
 
-Example
+## Upcoming Resources
 
-- AWS Provider
-- Random Provider
-- TLS Provider
-- Local Provider
-
----
-
-## provider.tf
-
-Purpose
-
-Configures AWS Provider.
-
-Example
-
-- AWS Region
-- Default Tags
+- 🚧 Public Route Table
+- 🚧 Private Route Table
+- 🚧 Route Table Associations
+- 🚧 NAT Gateway
+- 🚧 Elastic IP
+- 🚧 Network ACL
+- 🚧 Security Groups
 
 ---
 
-## variables.tf
+## VPC Folder
 
-Purpose
-
-Stores reusable input variables.
-
-Examples
-
-- AWS Region
-- Project Name
-- Environment
-- Owner
-- Instance Type
-- Bucket Name
-
----
-
-## terraform.tfvars
-
-Purpose
-
-Stores actual values of variables.
-
-Example
-
-```
-aws_region = "ap-south-1"
-
-project_name = "WON Bills"
-
-environment = "dev"
+```text
+VPC/
+│
+├── .env
+├── .gitignore
+├── README.md
+│
+├── versions.tf
+├── provider.tf
+├── variables.tf
+├── terraform.tfvars
+│
+├── network.tf
+├── outputs.tf
 ```
 
 ---
 
-## network.tf
+# 📄 Terraform File Explanation
 
-Purpose
-
-Creates AWS Networking.
-
-Resources
-
-- VPC
-- Subnet
-- Internet Gateway
-- Route Table
-- Security Group
-
----
-
-## keypair.tf
-
-Purpose
-
-Creates EC2 SSH Key Pair.
-
-Resources
-
-- RSA Private Key
-- AWS Key Pair
+| File | Description |
+|------|-------------|
+| versions.tf | Terraform Version & Providers |
+| provider.tf | AWS Provider Configuration |
+| variables.tf | Input Variables |
+| terraform.tfvars | Variable Values |
+| network.tf | VPC, Subnets, Route Tables, IGW |
+| keypair.tf | EC2 SSH Key Pair |
+| compute.tf | EC2 Instance & EBS |
+| userdata.sh | Server Bootstrap Script |
+| s3.tf | Amazon S3 Bucket |
+| outputs.tf | Displays Resource Outputs |
 
 ---
 
-## compute.tf
+# ⚙️ Terraform Commands
 
-Purpose
-
-Creates EC2 Server.
-
-Resources
-
-- Ubuntu EC2
-- Elastic IP
-- EBS Volume
-
----
-
-## userdata.sh
-
-Purpose
-
-Installs software automatically after EC2 launch.
-
-Installs
-
-- Java 17
-- Node.js
-- npm
-- PM2
-- Docker
-- Docker Compose
-- Git
-- curl
-- wget
-- AWS CLI
-
----
-
-## s3.tf
-
-Purpose
-
-Creates AWS S3 Bucket.
-
-Resources
-
-- Bucket
-- Versioning
-- Encryption
-- Public Access Block
-- Ownership Controls
-- Sample File Upload
-
----
-
-## outputs.tf
-
-Purpose
-
-Displays important information after deployment.
-
-Examples
-
-- EC2 Public IP
-- Bucket Name
-- Bucket ARN
-- SSH Command
-
----
-
-# Terraform Commands
-
-## terraform init
-
-Purpose
-
-Downloads required providers and initializes Terraform.
-
-Command
-
-```bash
-terraform init
-```
-
-Use
-
-Run only once when starting a new project or after changing providers.
-
----
-
-## terraform fmt
-
-Purpose
-
-Formats Terraform files.
-
-Command
+## 📌 Format Code
 
 ```bash
 terraform fmt
 ```
 
-Use
-
-Keeps code clean and consistent.
+Formats all Terraform files.
 
 ---
 
-## terraform validate
+## 📌 Initialize Terraform
 
-Purpose
+```bash
+terraform init
+```
 
-Checks Terraform syntax.
+Downloads provider plugins and initializes the project.
 
-Command
+Creates:
+
+- `.terraform/`
+- `.terraform.lock.hcl`
+
+---
+
+## 📌 Validate Configuration
 
 ```bash
 terraform validate
 ```
 
-Use
-
-Detects configuration errors before deployment.
+Checks Terraform configuration for syntax and configuration errors.
 
 ---
 
-## terraform plan
-
-Purpose
-
-Shows what Terraform will create, update or delete.
-
-Command
+## 📌 Preview Infrastructure
 
 ```bash
 terraform plan
 ```
 
-Use
-
-Review infrastructure changes before applying them.
+Shows the execution plan without creating resources.
 
 ---
 
-## terraform apply
-
-Purpose
-
-Creates or updates AWS infrastructure.
-
-Command
+## 📌 Create Infrastructure
 
 ```bash
 terraform apply
 ```
 
-Terraform will ask for confirmation before creating resources.
+Terraform asks for confirmation before creating resources.
 
 ---
 
-## terraform apply -auto-approve
-
-Purpose
-
-Creates infrastructure without asking for confirmation.
-
-Command
+## 📌 Create Without Confirmation
 
 ```bash
 terraform apply -auto-approve
 ```
 
-Use
+Creates resources automatically without prompting.
 
-Useful in CI/CD pipelines and automation.
+Useful for:
+
+- Jenkins
+- GitHub Actions
+- Azure DevOps
+- CI/CD Pipelines
 
 ---
 
-## terraform show
-
-Purpose
-
-Displays the current Terraform state.
-
-Command
+## 📌 Show Current State
 
 ```bash
 terraform show
 ```
 
+Displays the current Terraform state.
+
 ---
 
-## terraform state list
-
-Purpose
-
-Lists all resources managed by Terraform.
-
-Command
+## 📌 List Managed Resources
 
 ```bash
 terraform state list
 ```
 
+Lists all resources managed by Terraform.
+
 ---
 
-## terraform output
-
-Purpose
-
-Displays outputs defined in outputs.tf.
-
-Command
+## 📌 Display Outputs
 
 ```bash
 terraform output
 ```
 
-Example Output
+Displays outputs from `outputs.tf`.
 
-```
+Example:
+
+```text
 public_ip
 
 bucket_name
 
-bucket_arn
+vpc_id
 ```
 
 ---
 
-## terraform destroy
-
-Purpose
-
-Deletes all AWS resources created by Terraform.
-
-Command
+## 📌 Destroy Infrastructure
 
 ```bash
 terraform destroy
 ```
 
-Terraform asks for confirmation.
+Deletes all created AWS resources.
 
 ---
 
-## terraform destroy -auto-approve
-
-Purpose
-
-Deletes infrastructure without confirmation.
-
-Command
+## 📌 Destroy Without Confirmation
 
 ```bash
 terraform destroy -auto-approve
 ```
 
+Deletes all resources automatically.
+
 ---
 
-# Terraform Workflow
+# 🔄 Terraform Workflow
 
-```
+```text
 terraform fmt
-
-↓
-
+        │
+        ▼
 terraform init
-
-↓
-
+        │
+        ▼
 terraform validate
-
-↓
-
+        │
+        ▼
 terraform plan
-
-↓
-
+        │
+        ▼
 terraform apply
-
-↓
-
+        │
+        ▼
 terraform output
-
-↓
-
+        │
+        ▼
 terraform destroy
 ```
 
 ---
 
-# Best Practices
+# 🏗️ AWS Architecture
 
-- Keep Terraform state secure.
-- Never commit `.env` files.
-- Never commit `.pem` files.
-- Use `.gitignore`.
-- Review `terraform plan` before applying.
-- Use meaningful tags.
-- Store Terraform state remotely in production.
-- Enable S3 versioning.
-- Enable encryption for storage.
-- Use IAM roles instead of access keys in production.
+```text
+                    AWS Cloud
+                        │
+        ┌───────────────┼────────────────┐
+        │               │                │
+      Amazon VPC      Amazon S3      EC2 Instance
+        │                                │
+ ┌──────┴────────┐                 Ubuntu 24.04
+ │               │                      │
+Public Subnet  Private Subnet      Java 17
+ │                                    │
+Internet Gateway                  Node.js
+ │                                    │
+Elastic IP                        Docker
+                                  PM2
+```
 
 ---
 
-# Technologies Used
+# 💻 Technologies Used
 
 - Terraform
 - AWS EC2
-- AWS S3
 - AWS VPC
+- AWS S3
 - AWS IAM
+- Internet Gateway
+- Route Tables
 - Ubuntu 24.04 LTS
-- Amazon S3
-- Git
-- Docker
 - Java 17
 - Node.js
+- Docker
 - PM2
+- Git
 
 ---
 
-# Author
+# 📚 Best Practices
+
+- ✅ Infrastructure as Code (IaC)
+- ✅ Modular Terraform Design
+- ✅ Reusable Variables
+- ✅ Remote State (Recommended)
+- ✅ Least Privilege IAM
+- ✅ Secure S3 Storage
+- ✅ Encryption Enabled
+- ✅ Version Control
+- ✅ Resource Tagging
+- ✅ Production Folder Structure
+
+---
+
+# 🚀 Future AWS Projects
+
+- IAM
+- Security Groups
+- EBS
+- EFS
+- RDS
+- ALB
+- Auto Scaling
+- Route 53
+- ACM
+- CloudWatch
+- Lambda
+- SNS
+- SQS
+- ECR
+- ECS
+- EKS
+- CloudFront
+- WAF
+- Secrets Manager
+- Systems Manager (SSM)
+- Backup
+- Remote Backend (S3 + DynamoDB)
+
+---
+
+# 👨‍💻 Author
 
 **Manohar**
 
-Project: **WON Bills**
+**Project:** WON Bills
 
-Environment: **AWS Cloud**
+**Cloud Platform:** Amazon Web Services (AWS)
 
-Managed By: **Terraform**
+**Infrastructure Managed By:** Terraform
+
+---
+
+## ⭐ If you found this project useful, consider giving it a star on GitHub!
