@@ -410,32 +410,6 @@ Elastic IP                        Docker
 
 ---
 
-# 🚀 Future AWS Projects
-
-- IAM
-- Security Groups
-- EBS
-- EFS
-- RDS
-- ALB
-- Auto Scaling
-- Route 53
-- ACM
-- CloudWatch
-- Lambda
-- SNS
-- SQS
-- ECR
-- ECS
-- EKS
-- CloudFront
-- WAF
-- Secrets Manager
-- Systems Manager (SSM)
-- Backup
-- Remote Backend (S3 + DynamoDB)
-
----
 
 # 👨‍💻 Author
 
