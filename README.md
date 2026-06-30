@@ -2,7 +2,7 @@
 
 <div align="center">
 
-# 🌩️ WON Bills - AWS Infrastructure as Code (IaC)
+# 🌩️ AWS Infrastructure as Code (IaC)
 
 ### Enterprise AWS Infrastructure using Terraform
 
