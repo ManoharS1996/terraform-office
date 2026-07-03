@@ -5,31 +5,27 @@
 .terraform/
 .terraform.lock.hcl
 
-terraform.tfstate
-terraform.tfstate.*
-
+*.tfstate
+*.tfstate.*
 crash.log
 
 override.tf
 override.tf.json
-
 *_override.tf
 *_override.tf.json
 
 ######################################
-# Sensitive Variables
+# Terraform Variables
 ######################################
 
 terraform.tfvars
-
-*.tfvars
+*.auto.tfvars
 
 ######################################
 # Environment Variables
 ######################################
 
 .env
-
 .env.*
 
 ######################################
@@ -37,9 +33,7 @@ terraform.tfvars
 ######################################
 
 keys/
-
 *.pem
-
 *.pub
 
 ######################################
@@ -53,7 +47,6 @@ keys/
 ######################################
 
 .vscode/
-
 .idea/
 
 ######################################
@@ -61,13 +54,29 @@ keys/
 ######################################
 
 .DS_Store
-
 Thumbs.db
 
-#########################################
-# IAM Credentials
-#########################################
+######################################
+# Terraform Plan Files
+######################################
 
-keys/
+*.tfplan
+plan.out
 
-*.pem
+######################################
+# Backup Files
+######################################
+
+*.bak
+*.backup
+*.tmp
+
+######################################
+# Sensitive Files
+######################################
+
+credentials
+config
+*.key
+*.p12
+*.jks
