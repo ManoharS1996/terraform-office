@@ -114,7 +114,6 @@ This project can be used for:
 - 📈 Project Roadmap
 - 💻 Technologies Used
 - 👨‍💻 Author
-- 📄 License
 
 ---
 # 📂 Repository Structure
