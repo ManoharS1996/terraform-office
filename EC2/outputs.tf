@@ -13,32 +13,22 @@ output "application_name" {
 }
 
 ##############################################################
-# Network
+# Existing Network
 ##############################################################
 
 output "vpc_id" {
-  description = "VPC ID"
-  value       = aws_vpc.wonbills_vpc.id
+  description = "Existing VPC ID"
+  value       = data.aws_vpc.existing.id
 }
 
 output "public_subnet_id" {
-  description = "Public Subnet ID"
-  value       = aws_subnet.public_subnet.id
-}
-
-output "internet_gateway_id" {
-  description = "Internet Gateway ID"
-  value       = aws_internet_gateway.igw.id
-}
-
-output "route_table_id" {
-  description = "Route Table ID"
-  value       = aws_route_table.public_rt.id
+  description = "Existing Public Subnet ID"
+  value       = data.aws_subnet.public_subnet.id
 }
 
 output "security_group_id" {
-  description = "Security Group ID"
-  value       = aws_security_group.wonbills_sg.id
+  description = "Existing Web Security Group ID"
+  value       = data.aws_security_group.web_sg.id
 }
 
 ##############################################################
@@ -60,6 +50,21 @@ output "availability_zone" {
   value       = aws_instance.wonbills_server.availability_zone
 }
 
+output "private_ip" {
+  description = "Private IP"
+  value       = aws_instance.wonbills_server.private_ip
+}
+
+output "public_ip" {
+  description = "Public IP"
+  value       = aws_instance.wonbills_server.public_ip
+}
+
+output "public_dns" {
+  description = "Public DNS"
+  value       = aws_instance.wonbills_server.public_dns
+}
+
 ##############################################################
 # Elastic IP
 ##############################################################
@@ -67,11 +72,6 @@ output "availability_zone" {
 output "elastic_ip" {
   description = "Elastic IP Address"
   value       = aws_eip.wonbills_eip.public_ip
-}
-
-output "public_dns" {
-  description = "Public DNS"
-  value       = aws_instance.wonbills_server.public_dns
 }
 
 ##############################################################
@@ -92,8 +92,13 @@ output "private_key_location" {
 # EBS
 ##############################################################
 
+output "root_volume_id" {
+  description = "Root EBS Volume ID"
+  value       = aws_instance.wonbills_server.root_block_device[0].volume_id
+}
+
 output "extra_ebs_volume_id" {
-  description = "Additional EBS Volume"
+  description = "Additional EBS Volume ID"
   value       = aws_ebs_volume.extra_disk.id
 }
 
@@ -102,7 +107,7 @@ output "extra_ebs_volume_id" {
 ##############################################################
 
 output "ubuntu_ami" {
-  description = "Ubuntu AMI"
+  description = "Ubuntu 24.04 AMI"
   value       = data.aws_ami.ubuntu.id
 }
 

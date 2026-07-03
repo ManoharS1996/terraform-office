@@ -5,8 +5,7 @@
 variable "aws_region" {
   description = "AWS Region"
   type        = string
-
-  default = "ap-south-1"
+  default     = "ap-south-1"
 }
 
 ##############################################################
@@ -39,16 +38,21 @@ variable "owner" {
 }
 
 ##############################################################
-# Network
+# Existing Network
 ##############################################################
 
-variable "vpc_cidr" {
-  description = "VPC CIDR Block"
+variable "vpc_id" {
+  description = "Existing VPC ID"
   type        = string
 }
 
-variable "public_subnet_cidr" {
-  description = "Public Subnet CIDR"
+variable "public_subnet_id" {
+  description = "Existing Public Subnet ID"
+  type        = string
+}
+
+variable "security_group_id" {
+  description = "Existing Web Security Group ID"
   type        = string
 }
 
@@ -64,22 +68,19 @@ variable "availability_zone" {
 variable "instance_type" {
   description = "EC2 Instance Type"
   type        = string
-
-  default = "t3.micro"
+  default     = "t3.micro"
 }
 
 variable "volume_size" {
-  description = "Root Volume Size (GB)"
+  description = "Root EBS Volume Size (GB)"
   type        = number
-
-  default = 30
+  default     = 30
 }
 
 variable "extra_volume_size" {
   description = "Additional EBS Volume Size (GB)"
   type        = number
-
-  default = 30
+  default     = 30
 }
 
 ##############################################################
@@ -96,7 +97,6 @@ variable "key_name" {
 ##############################################################
 
 variable "allowed_ports" {
-
   description = "Inbound Ports"
 
   type = list(number)

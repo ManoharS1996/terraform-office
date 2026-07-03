@@ -9,21 +9,21 @@ data "aws_vpc" "existing" {
 }
 
 ##############################################################
-# Existing Public Subnet
+# Existing Public Subnet 1
 ##############################################################
 
-data "aws_subnet" "public_subnet" {
+data "aws_subnet" "public_subnet_1" {
 
-  id = var.public_subnet_id
+  id = var.public_subnet_1
 
 }
 
 ##############################################################
-# Existing Security Group
+# Existing Public Subnet 2
 ##############################################################
 
-data "aws_security_group" "web_sg" {
+data "aws_subnet" "public_subnet_2" {
 
-  id = var.security_group_id
+  id = var.public_subnet_2
 
 }

@@ -4,6 +4,8 @@
 
 variable "aws_region" {
 
+  description = "AWS Region"
+
   type = string
 
 }
@@ -14,11 +16,15 @@ variable "aws_region" {
 
 variable "project_name" {
 
+  description = "Project Name"
+
   type = string
 
 }
 
 variable "application_name" {
+
+  description = "Application Name"
 
   type = string
 
@@ -26,78 +32,65 @@ variable "application_name" {
 
 variable "environment" {
 
+  description = "Environment"
+
   type = string
 
 }
 
 variable "owner" {
 
+  description = "Owner"
+
   type = string
 
 }
 
 ##############################################################
-# EC2
+# Existing Infrastructure
 ##############################################################
+
+variable "vpc_id" {
+
+  description = "Existing VPC ID"
+
+  type = string
+
+}
+
+variable "public_subnet_1" {
+
+  description = "Public Subnet 1"
+
+  type = string
+
+}
+
+variable "public_subnet_2" {
+
+  description = "Public Subnet 2"
+
+  type = string
+
+}
 
 variable "instance_id" {
 
-  description = "Existing EC2 Instance ID"
-
-  type = string
-
-}
-
-variable "availability_zone" {
-
-  type = string
-
-}
-
-##############################################################
-# EBS
-##############################################################
-
-variable "volume_size" {
-
-  type = number
-
-}
-variable "volume_type" {
-
-  description = "EBS Volume Type"
-
-  type = string
-
-  default = "gp3"
-
-}
-
-variable "device_name" {
+  description = "EC2 Instance ID"
 
   type = string
 
 }
 ##############################################################
-# EBS Performance
+# ACM Certificate
 ##############################################################
 
-variable "iops" {
+variable "certificate_arn" {
 
-  description = "EBS IOPS"
+  description = "ACM SSL Certificate ARN"
 
-  type = number
+  type = string
 
-  default = 3000
-
-}
-
-variable "throughput" {
-
-  description = "EBS Throughput"
-
-  type = number
-
-  default = 125
+  default = ""
 
 }
