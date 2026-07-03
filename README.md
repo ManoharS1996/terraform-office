@@ -2,9 +2,9 @@
 
 # 🚀 Terraform AWS Infrastructure Repository
 
-### 🌩️ Enterprise Infrastructure as Code (IaC) using Terraform & Amazon Web Services
+### 🌩️ Enterprise AWS Infrastructure as Code (IaC) using Terraform
 
-Build, Deploy, and Manage Production-Ready AWS Infrastructure using Modular Terraform Projects.
+Design, Deploy, and Manage **Production-Ready AWS Infrastructure** using **Terraform** with modular, reusable, and scalable Infrastructure as Code (IaC) practices.
 
 ---
 
@@ -14,19 +14,26 @@ Build, Deploy, and Manage Production-Ready AWS Infrastructure using Modular Terr
 ![Linux](https://img.shields.io/badge/Linux-Ubuntu-green?style=for-the-badge&logo=linux)
 ![DevOps](https://img.shields.io/badge/DevOps-Terraform-blue?style=for-the-badge)
 ![IaC](https://img.shields.io/badge/Infrastructure_as_Code-Terraform-7B42BC?style=for-the-badge)
+![AWS EC2](https://img.shields.io/badge/Amazon-EC2-orange?style=for-the-badge&logo=amazonec2)
+![Amazon S3](https://img.shields.io/badge/Amazon-S3-green?style=for-the-badge&logo=amazons3)
+![Amazon VPC](https://img.shields.io/badge/Amazon-VPC-blue?style=for-the-badge)
+![Auto Scaling](https://img.shields.io/badge/AWS-AutoScaling-red?style=for-the-badge)
+![Load Balancer](https://img.shields.io/badge/Application-LoadBalancer-yellow?style=for-the-badge)
 ![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)
 
 ---
 
-### 📦 Repository Includes
+## 📦 Repository Includes
 
-🖥️ Amazon EC2 • 🌐 Amazon VPC • 🪣 Amazon S3 • 🔐 AWS IAM • 🛡️ Security Groups • 💾 Amazon EBS
+🌐 Amazon VPC • 🛡️ Security Groups • 🔐 IAM • 🖥️ EC2 • 💾 Amazon EBS • 🪣 Amazon S3 • ⚖️ Application Load Balancer • 📈 Auto Scaling Group
 
 ---
 
-### 🎯 Project Goal
+## 🎯 Repository Goal
 
-Design and deploy secure, scalable, and reusable AWS infrastructure using Terraform with production-oriented best practices.
+Build secure, scalable, highly available, and production-ready AWS infrastructure using **Terraform** by following Infrastructure as Code (IaC) best practices.
+
+This repository demonstrates how independent Terraform projects can work together to create a complete AWS infrastructure environment suitable for real-world deployments.
 
 </div>
 
@@ -34,11 +41,20 @@ Design and deploy secure, scalable, and reusable AWS infrastructure using Terraf
 
 # 📖 Overview
 
-This repository contains **modular Terraform projects** for deploying and managing AWS infrastructure.
+This repository contains **eight independent Terraform projects**, where each project provisions a specific AWS service.
 
-Each AWS service is organized into an independent Terraform project, making the repository easy to understand, maintain, and extend.
+Each service is managed separately, allowing infrastructure to be deployed, updated, and destroyed independently while maintaining proper dependencies between resources.
 
-The infrastructure follows Infrastructure as Code (IaC) principles and uses reusable variables, consistent tagging, and a production-ready folder structure.
+The repository follows Infrastructure as Code (IaC) principles and demonstrates modern Terraform practices such as reusable variables, modular project design, consistent tagging, secure AWS resource provisioning, and production-ready folder organization.
+
+This project can be used for:
+
+- Learning Terraform
+- AWS Infrastructure Automation
+- DevOps Portfolio Projects
+- Infrastructure as Code (IaC)
+- Terraform Best Practices
+- Cloud Infrastructure Deployments
 
 ---
 
@@ -48,63 +64,93 @@ The infrastructure follows Infrastructure as Code (IaC) principles and uses reus
 - ☁️ Amazon Web Services (AWS)
 - 🌐 Production-Ready VPC Networking
 - 🖥️ Ubuntu 24.04 EC2 Deployment
-- 💾 Amazon EBS Storage
+- 💾 Encrypted Amazon EBS Storage
 - 🪣 Secure Amazon S3 Buckets
-- 🔐 AWS IAM Users, Roles & Policies
-- 🛡️ Security Groups
+- 🔐 AWS IAM Users, Groups, Policies & Roles
+- 🛡️ Three-Layer Security Groups
+- ⚖️ Application Load Balancer (ALB)
+- 📈 Auto Scaling Group (ASG)
+- 📊 CloudWatch Scaling Policies
+- 🔄 Modular Terraform Projects
 - 🏷️ Standard Resource Tagging
-- 🔄 Reusable Terraform Modules
-- 📦 Modular Project Structure
-- ⚡ Easy Deployment
-- 📖 Well Documented
+- 📖 Easy to Understand Folder Structure
+- ⚡ Independent Project Deployment
+- 🛠️ Production-Oriented Design
 
 ---
 
-# 📊 Current Project Status
+# 📊 Repository Status
 
-| AWS Service | Status |
-|-------------|:------:|
-| 🖥️ Amazon EC2 | ✅ Completed |
-| 🌐 Amazon VPC | ✅ Completed |
-| 🪣 Amazon S3 | ✅ Completed |
-| 🔐 AWS IAM | ✅ Completed |
-| 🛡️ Security Groups | ✅ Completed |
-| 💾 Amazon EBS | ✅ Completed |
-| ⚖️ Application Load Balancer | 🚧 Planned |
-| 📈 Auto Scaling Group | 🚧 Planned |
+| AWS Service | Purpose | Status |
+|-------------|---------|:------:|
+| 🌐 Amazon VPC | Networking Infrastructure | ✅ Completed |
+| 🛡️ Security Groups | Network Firewall | ✅ Completed |
+| 🔐 AWS IAM | Identity & Access Management | ✅ Completed |
+| 🖥️ Amazon EC2 | Compute Instance | ✅ Completed |
+| 💾 Amazon EBS | Persistent Storage | ✅ Completed |
+| 🪣 Amazon S3 | Object Storage | ✅ Completed |
+| ⚖️ Application Load Balancer | Traffic Distribution | ✅ Completed |
+| 📈 Auto Scaling Group | High Availability & Auto Scaling | ✅ Completed |
 
 ---
+
 # 📚 Table of Contents
 
-- [📖 Overview](#-overview)
-- [✨ Key Features](#-key-features)
-- [🏗️ AWS Architecture](#️-aws-architecture)
-- [📦 Repository Structure](#-repository-structure)
-- [☁️ AWS Services](#️-aws-services)
-- [🚀 Infrastructure Workflow](#-infrastructure-workflow)
-- [🖥️ EC2 Project](#️-ec2-project)
-- [🌐 VPC Project](#-vpc-project)
-- [🪣 S3 Project](#-s3-project)
-- [🔐 IAM Project](#-iam-project)
-- [🛡️ Security Groups Project](#️-security-groups-project)
-- [💾 EBS Project](#-ebs-project)
-- [⚙️ Terraform Commands](#️-terraform-commands)
-- [🚀 Deployment Workflow](#-deployment-workflow)
-- [📁 Terraform File Explanation](#-terraform-file-explanation)
-- [📊 Outputs](#-outputs)
-- [🛠️ Best Practices](#️-best-practices)
-- [❗ Troubleshooting](#-troubleshooting)
-- [🗺️ Roadmap](#️-roadmap)
-- [👨‍💻 Author](#-author)
+- 📖 Overview
+- ✨ Key Features
+- 📊 Repository Status
+- 📂 Repository Structure
+- ☁️ AWS Services Included
+- 🏗️ AWS Infrastructure Architecture
+- 🔄 Infrastructure Workflow
+- 📦 Project Modules
+- 🚀 Deployment Guide
+- ⚙️ Terraform Commands
+- 📁 Terraform File Explanation
+- 📤 Outputs
+- 🔍 Verification Guide
+- 🛠️ Troubleshooting
+- 🛡️ Best Practices
+- 📈 Project Roadmap
+- 💻 Technologies Used
+- 👨‍💻 Author
+- 📄 License
 
 ---
-
-# 📦 Repository Structure
+# 📂 Repository Structure
 
 ```text
 terraform-office/
 │
+├── 📁 VPC/
+│   ├── versions.tf
+│   ├── provider.tf
+│   ├── variables.tf
+│   ├── terraform.tfvars
+│   ├── network.tf
+│   ├── outputs.tf
+│   └── README.md
+│
+├── 📁 SecurityGroups/
+│   ├── versions.tf
+│   ├── provider.tf
+│   ├── variables.tf
+│   ├── terraform.tfvars
+│   ├── security-group.tf
+│   ├── outputs.tf
+│   └── README.md
+│
+├── 📁 IAM/
+│   ├── versions.tf
+│   ├── provider.tf
+│   ├── variables.tf
+│   ├── terraform.tfvars
+│   ├── iam.tf
+│   ├── outputs.tf
+│   └── README.md
+│
 ├── 📁 EC2/
+│   ├── versions.tf
 │   ├── provider.tf
 │   ├── variables.tf
 │   ├── terraform.tfvars
@@ -115,39 +161,8 @@ terraform-office/
 │   ├── outputs.tf
 │   └── README.md
 │
-├── 📁 VPC/
-│   ├── provider.tf
-│   ├── variables.tf
-│   ├── terraform.tfvars
-│   ├── network.tf
-│   ├── outputs.tf
-│   └── README.md
-│
-├── 📁 S3/
-│   ├── provider.tf
-│   ├── variables.tf
-│   ├── terraform.tfvars
-│   ├── s3.tf
-│   ├── outputs.tf
-│   └── README.md
-│
-├── 📁 IAM/
-│   ├── provider.tf
-│   ├── variables.tf
-│   ├── terraform.tfvars
-│   ├── iam.tf
-│   ├── outputs.tf
-│   └── README.md
-│
-├── 📁 Security-Groups/
-│   ├── provider.tf
-│   ├── variables.tf
-│   ├── terraform.tfvars
-│   ├── security-group.tf
-│   ├── outputs.tf
-│   └── README.md
-│
 ├── 📁 EBS/
+│   ├── versions.tf
 │   ├── provider.tf
 │   ├── variables.tf
 │   ├── terraform.tfvars
@@ -155,538 +170,352 @@ terraform-office/
 │   ├── outputs.tf
 │   └── README.md
 │
-├── 📁 ALB/            🚧 Planned
+├── 📁 S3/
+│   ├── versions.tf
+│   ├── provider.tf
+│   ├── variables.tf
+│   ├── terraform.tfvars
+│   ├── s3.tf
+│   ├── outputs.tf
+│   └── README.md
 │
-├── 📁 ASG/            🚧 Planned
+├── 📁 ALB/
+│   ├── versions.tf
+│   ├── provider.tf
+│   ├── variables.tf
+│   ├── terraform.tfvars
+│   ├── datasource.tf
+│   ├── security-group.tf
+│   ├── load-balancer.tf
+│   ├── target-group.tf
+│   ├── listener.tf
+│   ├── outputs.tf
+│   └── README.md
+│
+├── 📁 ASG/
+│   ├── versions.tf
+│   ├── provider.tf
+│   ├── variables.tf
+│   ├── terraform.tfvars
+│   ├── datasource.tf
+│   ├── launch-template.tf
+│   ├── autoscaling.tf
+│   ├── scaling-policy.tf
+│   ├── cloudwatch.tf
+│   ├── userdata.sh
+│   ├── outputs.tf
+│   └── README.md
 │
 ├── .gitignore
-├── README.md
-└── LICENSE
+├── LICENSE
+└── README.md
 ```
 
 ---
 
 # ☁️ AWS Services Included
 
-| AWS Service | Purpose | Status |
-|-------------|---------|:------:|
-| 🖥️ Amazon EC2 | Virtual Machine Hosting | ✅ |
-| 🌐 Amazon VPC | Network Infrastructure | ✅ |
-| 🪣 Amazon S3 | Object Storage | ✅ |
-| 🔐 AWS IAM | Identity & Access Management | ✅ |
+| Service | Purpose | Status |
+|----------|---------|:------:|
+| 🌐 Amazon VPC | Networking Infrastructure | ✅ |
 | 🛡️ Security Groups | Network Firewall | ✅ |
+| 🔐 AWS IAM | Identity & Access Management | ✅ |
+| 🖥️ Amazon EC2 | Compute Instance | ✅ |
 | 💾 Amazon EBS | Persistent Block Storage | ✅ |
-| ⚖️ Application Load Balancer | Traffic Distribution | 🚧 |
-| 📈 Auto Scaling Group | High Availability | 🚧 |
+| 🪣 Amazon S3 | Object Storage | ✅ |
+| ⚖️ Application Load Balancer | Traffic Distribution | ✅ |
+| 📈 Auto Scaling Group | High Availability | ✅ |
+
+---
+
+# 🏗️ Complete AWS Infrastructure Architecture
+
+```text
+                                         🌍 Internet
+                                              │
+                                              ▼
+                                    Internet Gateway
+                                              │
+                                              ▼
+                                        Public Route
+                                              │
+                                              ▼
+                                    Public Subnet 1
+                                              │
+                       ┌──────────────────────┴──────────────────────┐
+                       │                                             │
+                       ▼                                             ▼
+          Application Load Balancer                         Public Subnet 2
+                       │
+                       ▼
+                 Target Group
+                       │
+          ┌────────────┴────────────┐
+          │                         │
+          ▼                         ▼
+     EC2 Instance              EC2 Instance
+          ▲                         ▲
+          └──────────┬──────────────┘
+                     │
+              Auto Scaling Group
+                     │
+             Launch Template
+                     │
+         ┌───────────┼────────────┐
+         │           │            │
+         ▼           ▼            ▼
+   Security Group  Root EBS   User Data
+         │           │
+         │      Additional EBS
+         │
+         ▼
+      IAM Role
+         │
+         ▼
+ Amazon S3 Bucket
+
+         │
+         ▼
+ CloudWatch Alarms
+         │
+         ▼
+ Scale Out / Scale In
+```
+
+---
+
+# 🔄 Infrastructure Deployment Order
+
+Deploy the projects in the following sequence:
+
+```text
+1️⃣ VPC
+
+        │
+
+        ▼
+
+2️⃣ Security Groups
+
+        │
+
+        ▼
+
+3️⃣ IAM
+
+        │
+
+        ▼
+
+4️⃣ EC2
+
+        │
+
+        ▼
+
+5️⃣ EBS
+
+        │
+
+        ▼
+
+6️⃣ S3
+
+        │
+
+        ▼
+
+7️⃣ Application Load Balancer
+
+        │
+
+        ▼
+
+8️⃣ Auto Scaling Group
+```
+
+---
+
+# 🔗 AWS Resource Dependency
+
+```text
+Amazon VPC
+      │
+      ▼
+Public / Private Subnets
+      │
+      ▼
+Internet Gateway
+      │
+      ▼
+Route Tables
+      │
+      ▼
+Security Groups
+      │
+      ▼
+IAM
+      │
+      ▼
+EC2 Instance
+      │
+ ┌────┴───────────┐
+ ▼                ▼
+EBS             Amazon S3
+ │
+ ▼
+Application Load Balancer
+ │
+ ▼
+Target Group
+ │
+ ▼
+Launch Template
+ │
+ ▼
+Auto Scaling Group
+ │
+ ▼
+CloudWatch Scaling Policies
+```
 
 ---
 
 # 🎯 Repository Design Principles
 
-This repository is built using modern Infrastructure as Code (IaC) practices.
+This repository is designed using Infrastructure as Code (IaC) best practices.
 
 ### Design Goals
 
-- 📦 Modular Terraform Projects
-- 🔁 Reusable Infrastructure
-- 🔒 Secure AWS Resources
+- 📦 Independent Terraform Projects
+- 🔄 Modular Infrastructure
+- 🔐 Secure AWS Resources
+- 📈 High Availability
+- ⚖️ Load Balanced Architecture
+- 🚀 Automatic Scaling
 - 🏷️ Standard Resource Tagging
-- 📖 Easy Documentation
-- ⚙️ Production-Oriented Structure
-- 🚀 Simple Deployment Process
-- 📈 Easy Scalability
+- ♻️ Reusable Configuration
+- 📖 Well Documented Projects
+- 🛠️ Easy Maintenance
+- ☁️ Production-Ready Design
+- 💰 Cost Efficient Infrastructure
 
 ---
-# 🏗️ AWS Infrastructure Architecture
+# 🌐 Amazon VPC
 
-The following diagram illustrates how the AWS services in this repository work together to provide a secure, scalable, and production-ready infrastructure.
+Amazon Virtual Private Cloud (VPC) provides an isolated networking environment for all AWS resources.
 
-```text
-                                         🌍 Internet
-                                              │
-                                              │
-                                    ┌──────────────────┐
-                                    │ Internet Gateway │
-                                    └────────┬─────────┘
-                                             │
-                                      Route Table
-                                             │
-                                    Public Subnet (VPC)
-                                             │
-                    ┌────────────────────────┴────────────────────────┐
-                    │                                                 │
-             🛡️ Web Security Group                            🔐 IAM Role
-          (22, 80, 443 Allowed)                      (AWS Resource Access)
-                    │                                                 │
-                    └────────────────────────┬────────────────────────┘
-                                             │
-                                    🖥️ Ubuntu EC2 Server
-                                             │
-        ┌─────────────────────────────┬──────────────────────────────┐
-        │                             │                              │
-        │                             │                              │
-   💾 Amazon EBS                 🪣 Amazon S3                  ☁ AWS Services
- Persistent Storage             Object Storage               CloudWatch / SSM
-        │                             │                              │
-        │                             │                              │
-  Application Data             Images / PDFs / Logs          Monitoring & Access
-        │
-        │
- Docker Containers
- Java 17
- Node.js
- PM2
-```
+The VPC is the foundation of this infrastructure and hosts all networking resources including subnets, route tables, internet gateway, security groups, EC2 instances, Application Load Balancer, and Auto Scaling Group.
 
 ---
-
-# 🚀 Infrastructure Workflow
-
-The infrastructure follows a logical deployment order.
-
-```text
-Terraform Code
-
-        │
-
-        ▼
-
-AWS Provider
-
-        │
-
-        ▼
-
-Amazon VPC
-
-        │
-
-        ▼
-
-Public / Private Subnets
-
-        │
-
-        ▼
-
-Internet Gateway
-
-        │
-
-        ▼
-
-Route Tables
-
-        │
-
-        ▼
-
-Security Groups
-
-        │
-
-        ▼
-
-Ubuntu EC2
-
-        │
-
-        ▼
-
-Amazon EBS
-
-        │
-
-        ▼
-
-IAM Role
-
-        │
-
-        ▼
-
-Amazon S3
-```
-
----
-
-# 🔄 AWS Resource Relationships
-
-## 🌐 Amazon VPC
-
-The Virtual Private Cloud (VPC) acts as the foundation of the infrastructure.
-
-Responsibilities
-
-- Private Network
-- IP Address Management
-- Subnets
-- Route Tables
-- Internet Connectivity
-
----
-
-## 🌍 Internet Gateway
-
-Provides Internet connectivity to resources deployed inside public subnets.
-
-Without an Internet Gateway:
-
-- SSH will not work
-- HTTP/HTTPS will not work
-- Package installation will fail
-
----
-
-## 🛣 Route Tables
-
-Route Tables define how network traffic flows inside the VPC.
-
-Example
-
-```text
-0.0.0.0/0
-
-↓
-
-Internet Gateway
-```
-
----
-
-## 🛡 Security Groups
-
-Security Groups protect EC2 instances.
-
-### Web Security Group
-
-Allowed
-
-- SSH (22)
-- HTTP (80)
-- HTTPS (443)
-
-```text
-Internet
-
-↓
-
-Web Security Group
-
-↓
-
-EC2
-```
-
----
-
-### Application Security Group
-
-Allowed
-
-- Node.js (3000)
-- Spring Boot (8080)
-- Custom Apps (5000)
-
-Only accessible from the Web Security Group.
-
-```text
-Web SG
-
-↓
-
-Application SG
-```
-
----
-
-### Database Security Group
-
-Allowed
-
-- MySQL
-- PostgreSQL
-- MongoDB
-- Redis
-
-Only accessible from the Application Security Group.
-
-```text
-Application SG
-
-↓
-
-Database SG
-```
-
----
-
-# 🖥 Amazon EC2 Workflow
-
-Amazon EC2 hosts the application server.
-
-The `userdata.sh` script automatically installs:
-
-- Ubuntu Updates
-- Java 17
-- Node.js
-- npm
-- Docker
-- Docker Compose
-- PM2
-- AWS CLI
-- Git
-
-Workflow
-
-```text
-Launch EC2
-
-↓
-
-Run userdata.sh
-
-↓
-
-Install Dependencies
-
-↓
-
-Configure Server
-
-↓
-
-Deploy Application
-```
-
----
-
-# 💾 Amazon EBS Workflow
-
-Amazon EBS provides persistent storage for EC2.
-
-Workflow
-
-```text
-Create Volume
-
-↓
-
-Attach to EC2
-
-↓
-
-Format Volume
-
-↓
-
-Mount Storage
-
-↓
-
-Store Application Data
-
-↓
-
-Create Snapshot
-
-↓
-
-Restore if Required
-```
-
-Typical Storage
-
-- Docker Volumes
-- Uploads
-- Application Logs
-- Database Files
-- Backups
-
----
-
-# 🪣 Amazon S3 Workflow
-
-Amazon S3 stores files independently of EC2.
-
-Workflow
-
-```text
-Application
-
-↓
-
-Upload File
-
-↓
-
-Amazon S3
-
-↓
-
-Store Objects
-
-↓
-
-Download Anytime
-```
-
-Common Use Cases
-
-- Images
-- PDFs
-- Videos
-- Backups
-- Static Website Files
-
----
-
-# 🔐 IAM Workflow
-
-IAM controls authentication and authorization.
-
-```text
-IAM User
-
-↓
-
-IAM Group
-
-↓
-
-IAM Policy
-
-↓
-
-IAM Role
-
-↓
-
-EC2 Instance
-
-↓
-
-AWS Resources
-```
-
-Benefits
-
-- No hardcoded AWS credentials
-- Secure access to S3
-- Secure access to CloudWatch
-- Secure access to Systems Manager
-
----
-
-# 🎯 Why This Architecture?
-
-This design provides:
-
-- ✅ Secure Networking
-- ✅ Modular Infrastructure
-- ✅ Persistent Storage
-- ✅ Object Storage
-- ✅ Secure Authentication
-- ✅ Reusable Terraform Modules
-- ✅ Production-Ready Design
-- ✅ Easy Scaling
-# 📦 Infrastructure Modules
-
-This repository is organized into independent Terraform modules. Each module is responsible for provisioning a specific AWS service and follows Infrastructure as Code (IaC) best practices.
-
----
-
-# 🖥️ Amazon EC2
-
-Amazon EC2 provides scalable virtual servers to host applications and services.
 
 ## 🎯 Purpose
 
-Deploy a production-ready Ubuntu server with all required software installed automatically.
+- Create an isolated AWS network
+- Configure public and private subnets
+- Enable secure Internet connectivity
+- Route traffic correctly
+- Provide scalable network architecture
+
+---
 
 ## 📦 Resources Created
 
-- Ubuntu 24.04 LTS EC2 Instance
-- Elastic IP
-- EC2 Key Pair
-- Root EBS Volume
-- Additional EBS Volume
-- User Data Script
-- Outputs
+- Amazon VPC
+- Internet Gateway
+- Public Subnet 1
+- Public Subnet 2
+- Private Subnet 1
+- Private Subnet 2
+- Public Route Table
+- Private Route Table
+- Route Table Associations
 
-## ⚙️ Software Installed
+---
 
-- Java 17
-- Node.js
-- npm
-- Docker Engine
-- Docker Compose
-- PM2
-- Git
-- AWS CLI
-- curl
-- wget
-- unzip
-- tree
-- htop
-
-## 🔄 Workflow
+## 🔄 VPC Workflow
 
 ```text
 Terraform
 
-↓
+      │
 
-EC2 Instance
+      ▼
 
-↓
+Create VPC
 
-Elastic IP
+      │
 
-↓
+      ▼
 
-User Data
+Create Public & Private Subnets
 
-↓
+      │
 
-Java
+      ▼
 
-↓
+Create Internet Gateway
 
-Node.js
+      │
 
-↓
+      ▼
 
-Docker
+Create Route Tables
 
-↓
+      │
 
-Application
+      ▼
+
+Associate Route Tables
+
+      │
+
+      ▼
+
+Network Ready
 ```
 
 ---
 
-# 🌐 Amazon VPC
-
-Amazon Virtual Private Cloud (VPC) provides an isolated network for AWS resources.
-
-## 🎯 Purpose
-
-Create secure networking for all infrastructure resources.
-
-## 📦 Resources Created
-
-- VPC
-- Public Subnet
-- Private Subnets
-- Internet Gateway
-- Route Tables
-- Route Table Associations
-
-## 🔄 Workflow
+## 🌍 Network Architecture
 
 ```text
-AWS
+                 Amazon VPC
+              10.0.0.0/16
+                     │
+     ┌───────────────┼───────────────┐
+     │                               │
+     ▼                               ▼
+Public Subnet 1                Public Subnet 2
+10.0.1.0/24                    10.0.2.0/24
+     │                               │
+     └───────────────┬───────────────┘
+                     │
+             Internet Gateway
+                     │
+                  Internet
+```
+
+---
+
+## ✅ Benefits
+
+- Secure Network Isolation
+- High Availability
+- Scalable Design
+- Custom IP Addressing
+- Internet Connectivity
+- Multi-AZ Support
+- Production Ready
+
+---
+
+## 🔍 Verify in AWS Console
+
+Navigate to:
+
+```text
+AWS Console
 
 ↓
 
@@ -694,145 +523,51 @@ VPC
 
 ↓
 
-Subnets
-
-↓
-
-Route Tables
-
-↓
-
-Internet Gateway
-
-↓
-
-Internet Access
+Your VPC
 ```
 
-## ✅ Benefits
+Verify:
 
-- Secure Networking
-- Private Infrastructure
-- Custom IP Ranges
-- High Availability
-- Easy Scalability
-
----
-
-# 🪣 Amazon S3
-
-Amazon S3 provides secure and durable object storage.
-
-## 🎯 Purpose
-
-Store files independently from EC2.
-
-## 📦 Resources Created
-
-- S3 Bucket
-- Versioning
-- Server Side Encryption
-- Ownership Controls
-- Public Access Block
-- Sample Object Upload
-
-## Common Use Cases
-
-- Images
-- Documents
-- PDFs
-- Videos
-- Static Website Files
-- Application Backups
-- Log Storage
-
-## 🔄 Workflow
-
-```text
-Application
-
-↓
-
-Upload
-
-↓
-
-Amazon S3
-
-↓
-
-Store Objects
-
-↓
-
-Retrieve Objects
-```
-
----
-
-# 🔐 AWS IAM
-
-AWS Identity and Access Management controls access to AWS resources.
-
-## 🎯 Purpose
-
-Manage authentication and authorization securely.
-
-## 📦 Resources Created
-
-- IAM User
-- IAM Group
-- IAM Policy
-- IAM Role
-- Policy Attachments
-- EC2 Instance Profile
-
-## 🔄 Workflow
-
-```text
-IAM User
-
-↓
-
-IAM Group
-
-↓
-
-IAM Policy
-
-↓
-
-IAM Role
-
-↓
-
-EC2 Instance
-
-↓
-
-AWS Services
-```
-
-## ✅ Benefits
-
-- Least Privilege Access
-- Secure Authentication
-- Centralized Permission Management
-- Role-Based Access Control
+- VPC Created
+- Public Subnets
+- Private Subnets
+- Internet Gateway Attached
+- Route Tables
+- Route Table Associations
 
 ---
 
 # 🛡️ Security Groups
 
-Security Groups act as virtual firewalls for AWS resources.
+Security Groups act as virtual firewalls that control inbound and outbound traffic.
 
-## 🎯 Purpose
-
-Control inbound and outbound traffic for EC2 instances.
+This repository creates three dedicated Security Groups to separate Web, Application, and Database traffic.
 
 ---
 
-## 🌍 Web Security Group
+## 🎯 Purpose
+
+- Secure EC2 Instances
+- Control Network Access
+- Restrict Application Ports
+- Follow Least Privilege Principle
+
+---
+
+## 📦 Resources Created
+
+- Web Security Group
+- Application Security Group
+- Database Security Group
+
+---
+
+# 🌍 Web Security Group
+
+Used by:
+
+- Application Load Balancer
+- Web EC2 Instances
 
 ### Allowed Ports
 
@@ -853,12 +588,17 @@ Web Security Group
 
 ↓
 
-EC2
+EC2 / ALB
 ```
 
 ---
 
-## ⚙️ Application Security Group
+# ⚙️ Application Security Group
+
+Used by:
+
+- Backend Applications
+- APIs
 
 ### Allowed Ports
 
@@ -868,26 +608,65 @@ EC2
 | 5000 | Custom Application |
 | 8080 | Spring Boot |
 
-Traffic Allowed From
+Traffic Source
 
-- Web Security Group
+```text
+Web Security Group
+
+↓
+
+Application Security Group
+```
 
 ---
 
-## 🗄️ Database Security Group
+# 🗄️ Database Security Group
+
+Used by:
+
+- MySQL
+- PostgreSQL
+- MongoDB
+- Redis
 
 ### Allowed Ports
 
 | Port | Database |
-|------|------------|
+|------|-----------|
 | 3306 | MySQL |
 | 5432 | PostgreSQL |
 | 27017 | MongoDB |
 | 6379 | Redis |
 
-Traffic Allowed From
+Traffic Source
 
-- Application Security Group
+```text
+Application Security Group
+
+↓
+
+Database Security Group
+```
+
+---
+
+# 🔒 Security Architecture
+
+```text
+                 Internet
+                     │
+                     ▼
+          Web Security Group
+        (22, 80, 443 Allowed)
+                     │
+                     ▼
+      Application Security Group
+      (3000, 5000, 8080 Allowed)
+                     │
+                     ▼
+       Database Security Group
+ (3306, 5432, 27017, 6379 Allowed)
+```
 
 ---
 
@@ -895,6 +674,10 @@ Traffic Allowed From
 
 ```text
 Internet
+
+↓
+
+Application Load Balancer
 
 ↓
 
@@ -911,846 +694,1791 @@ Database Security Group
 
 ---
 
-# 💾 Amazon EBS
+## ✅ Benefits
 
-Amazon Elastic Block Store provides persistent block storage for EC2 instances.
+- Layered Security
+- Least Privilege Access
+- Isolated Application Traffic
+- Secure Database Connectivity
+- Easy Firewall Management
+- Production-Ready Network Security
+
+---
+
+## 🔍 Verify in AWS Console
+
+Navigate to:
+
+```text
+AWS Console
+
+↓
+
+EC2
+
+↓
+
+Security Groups
+```
+
+Verify:
+
+- Web Security Group
+- Application Security Group
+- Database Security Group
+- Inbound Rules
+- Outbound Rules
+- Associated Resources
+
+---
+# 🔐 AWS Identity and Access Management (IAM)
+
+AWS IAM provides secure authentication and authorization for AWS resources.
+
+This project provisions an IAM user with programmatic and console access, making it suitable for Terraform deployments and AWS administration.
+
+---
 
 ## 🎯 Purpose
 
-Provide high-performance storage for applications and data.
+- Manage AWS identities securely
+- Create IAM Users
+- Generate Access Keys
+- Enable AWS Console Login
+- Follow Least Privilege Access
+
+---
 
 ## 📦 Resources Created
 
-- GP3 EBS Volume
-- Encrypted Storage
-- Volume Attachment
-- EBS Snapshot
-- Outputs
+- IAM User
+- Login Profile
+- Access Key
+- Secret Access Key
+- IAM Policies
+- IAM Group (Optional)
 
-## Why Use EBS?
+---
+
+## 🔄 IAM Workflow
+
+```text
+Terraform
+
+      │
+
+      ▼
+
+Create IAM User
+
+      │
+
+      ▼
+
+Generate Login Profile
+
+      │
+
+      ▼
+
+Generate Access Key
+
+      │
+
+      ▼
+
+Attach IAM Policies
+
+      │
+
+      ▼
+
+IAM User Ready
+```
+
+---
+
+## 🔑 IAM Outputs
+
+After deployment Terraform generates:
+
+- IAM Username
+- AWS Console Login URL
+- Access Key ID
+- Secret Access Key
+- Temporary Password
+
+---
+
+## 🔒 IAM Security Best Practices
+
+- Rotate Access Keys regularly
+- Enable MFA for Console Login
+- Never commit Access Keys to GitHub
+- Use IAM Roles whenever possible
+- Follow Least Privilege Principle
+
+---
+
+## 🔍 Verify in AWS Console
+
+Navigate to:
+
+```text
+AWS Console
+
+↓
+
+IAM
+
+↓
+
+Users
+```
+
+Verify:
+
+- IAM User
+- Login Profile
+- Access Keys
+- Attached Policies
+
+---
+
+# 🖥️ Amazon EC2
+
+Amazon EC2 provides secure and scalable virtual servers for hosting applications.
+
+The EC2 project creates a production-ready Ubuntu server with an Elastic IP, SSH Key Pair, encrypted root EBS volume, and automated software installation using User Data.
+
+---
+
+## 🎯 Purpose
+
+- Launch Ubuntu Server
+- Configure SSH Access
+- Install Required Software Automatically
+- Assign Elastic IP
+- Enable Secure Remote Access
+
+---
+
+## 📦 Resources Created
+
+- Ubuntu 24.04 EC2 Instance
+- Elastic IP
+- SSH Key Pair
+- Root EBS Volume
+- User Data Script
+
+---
+
+## 🔄 EC2 Deployment Workflow
+
+```text
+Terraform
+
+      │
+
+      ▼
+
+Create Key Pair
+
+      │
+
+      ▼
+
+Launch Ubuntu EC2
+
+      │
+
+      ▼
+
+Create Root EBS
+
+      │
+
+      ▼
+
+Associate Elastic IP
+
+      │
+
+      ▼
+
+Execute userdata.sh
+
+      │
+
+      ▼
+
+EC2 Ready
+```
+
+---
+
+# 🔑 SSH Key Pair
+
+Terraform automatically creates an SSH Key Pair and stores the private key locally.
+
+Example:
+
+```text
+keys/
+
+└── won-bills-key.pem
+```
+
+SSH Connection:
+
+```bash
+ssh -i keys/won-bills-key.pem ubuntu@<Elastic-IP>
+```
+
+---
+
+# 🌍 Elastic IP
+
+Elastic IP provides a static public IP address.
+
+Benefits:
+
+- Static Public IP
+- Easy DNS Mapping
+- Stable SSH Connection
+- Suitable for Production
+
+---
+
+# 💾 Root EBS Volume
+
+Root Storage Configuration:
+
+| Property | Value |
+|----------|-------|
+| Type | gp3 |
+| Size | 30 GB |
+| Encryption | Enabled |
+| Delete on Termination | Enabled |
+
+---
+
+# ⚙️ User Data
+
+During instance creation, Terraform automatically executes:
+
+```text
+userdata.sh
+```
+
+The script installs and configures:
+
+- Ubuntu Updates
+- Java 17
+- Node.js
+- Docker
+- PM2
+- AWS CLI
+- Terraform (Optional)
+- Git
+- Curl
+- Wget
+- Application Directory
+
+No manual server setup is required.
+
+---
+
+## 🏗️ EC2 Architecture
+
+```text
+Terraform
+
+      │
+
+      ▼
+
+Launch EC2
+
+      │
+
+      ▼
+
+Create Root EBS
+
+      │
+
+      ▼
+
+Allocate Elastic IP
+
+      │
+
+      ▼
+
+Run userdata.sh
+
+      │
+
+      ▼
+
+Ubuntu Server Ready
+```
+
+---
+
+## 🔍 Verify in AWS Console
+
+Navigate to:
+
+```text
+AWS Console
+
+↓
+
+EC2
+
+↓
+
+Instances
+```
+
+Verify:
+
+- Instance Running
+- Ubuntu 24.04
+- Elastic IP Attached
+- Key Pair Assigned
+- Security Group Attached
+- Root Volume Created
+
+---
+
+## 🧪 Verify via SSH
+
+Connect:
+
+```bash
+ssh -i keys/won-bills-key.pem ubuntu@<Elastic-IP>
+```
+
+Verify software:
+
+```bash
+java -version
+```
+
+```bash
+node -v
+```
+
+```bash
+docker --version
+```
+
+```bash
+pm2 -v
+```
+
+```bash
+aws --version
+```
+
+---
+
+## ✅ EC2 Benefits
+
+- Automated Provisioning
+- Secure SSH Access
+- Static Public IP
+- Encrypted Root Storage
+- Infrastructure as Code
+- Production-Ready Ubuntu Server
+- Repeatable Deployment
+- Easy Maintenance
+
+---
+# 💾 Amazon Elastic Block Store (EBS)
+
+Amazon Elastic Block Store (EBS) provides persistent block-level storage for Amazon EC2 instances.
+
+Unlike instance storage, EBS volumes retain data even after the EC2 instance is stopped or restarted, making them ideal for databases, applications, logs, and backups.
+
+---
+
+## 🎯 Purpose
 
 - Persistent Storage
-- High Performance SSD
-- Data Encryption
-- Automatic Snapshots
-- Backup & Recovery
-- Independent of EC2 Lifecycle
+- High Performance SSD Storage
+- Data Backup using Snapshots
+- Additional Storage for Applications
+- Encrypted Storage
+
+---
+
+## 📦 Resources Created
+
+- Additional EBS Volume
+- EBS Volume Attachment
+- EBS Snapshot
+
+---
+
+## ⚙️ EBS Configuration
+
+| Property | Value |
+|----------|-------|
+| Volume Type | gp3 |
+| Size | 30 GB |
+| IOPS | 3000 |
+| Throughput | 125 MB/s |
+| Encryption | Enabled |
+| Snapshot | Enabled |
 
 ---
 
 ## 🔄 EBS Workflow
 
 ```text
-Create Volume
+Terraform
 
-↓
+      │
 
-Attach to EC2
+      ▼
 
-↓
+Create EBS Volume
 
-Format Disk
+      │
 
-↓
+      ▼
 
-Mount Volume
+Attach Volume to EC2
 
-↓
+      │
 
-Store Data
-
-↓
+      ▼
 
 Create Snapshot
 
+      │
+
+      ▼
+
+Storage Ready
+```
+
+---
+
+## 🏗️ EBS Architecture
+
+```text
+                 EC2 Instance
+                      │
+        ┌─────────────┴─────────────┐
+        │                           │
+        ▼                           ▼
+
+ Root EBS (30 GB)          Additional EBS (30 GB)
+
+                                     │
+
+                                     ▼
+
+                              Snapshot Backup
+```
+
+---
+
+## 📂 Volume Attachment
+
+The additional EBS volume is attached to the EC2 instance.
+
+Example Device Name
+
+```text
+/dev/sdg
+```
+
+---
+
+## 📸 Snapshot
+
+Terraform automatically creates a snapshot for backup purposes.
+
+Benefits
+
+- Disaster Recovery
+- Restore Volume
+- Backup
+- Clone Storage
+- Migration
+
+---
+
+## 🔍 Verify in AWS Console
+
+Navigate to
+
+```text
+AWS Console
+
 ↓
 
-Restore When Needed
-```
-
----
-
-## 💾 EC2 + EBS Relationship
-
-Every EC2 instance requires storage.
-
-```text
-Ubuntu EC2
-
-│
-
-├── Root Volume
-│      │
-│      └── Operating System
-│
-└── Additional EBS Volume
-       │
-       ├── Docker Data
-       ├── Application Logs
-       ├── Uploads
-       ├── Database Files
-       └── Backups
-```
-
----
-
-# 🔗 Module Dependencies
-
-```text
-VPC
- │
- ▼
-Subnets
- │
- ▼
-Route Tables
- │
- ▼
-Internet Gateway
- │
- ▼
-Security Groups
- │
- ▼
 EC2
- │
- ├───────────────┐
- │               │
- ▼               ▼
-EBS             IAM Role
- │               │
- ▼               ▼
-Application     AWS Services
- │
- ▼
-Amazon S3
+
+↓
+
+Volumes
+```
+
+Verify
+
+- Root Volume
+- Additional Volume
+- Attached Instance
+- Volume State
+- Encryption Enabled
+
+---
+
+Check Snapshot
+
+```text
+AWS Console
+
+↓
+
+EC2
+
+↓
+
+Snapshots
+```
+
+Verify
+
+- Snapshot Created
+- Volume Reference
+- Completed State
+
+---
+
+## ✅ EBS Benefits
+
+- Persistent Storage
+- High Performance SSD
+- Data Encryption
+- Easy Expansion
+- Snapshot Backup
+- Production Ready
+
+---
+
+# 🪣 Amazon Simple Storage Service (S3)
+
+Amazon S3 provides highly durable object storage for applications, backups, images, videos, logs, and documents.
+
+This project provisions a secure S3 bucket with versioning, encryption, and uploads a sample object.
+
+---
+
+## 🎯 Purpose
+
+- Object Storage
+- Application Assets
+- Backup Storage
+- Static Files
+- Log Storage
+
+---
+
+## 📦 Resources Created
+
+- Amazon S3 Bucket
+- Bucket Encryption
+- Bucket Versioning
+- Sample Object Upload
+
+---
+
+## ⚙️ Bucket Configuration
+
+| Property | Value |
+|----------|-------|
+| Bucket Type | General Purpose |
+| Versioning | Enabled |
+| Encryption | AES256 |
+| Public Access | Configurable |
+
+---
+
+## 🔄 S3 Workflow
+
+```text
+Terraform
+
+      │
+
+      ▼
+
+Create Bucket
+
+      │
+
+      ▼
+
+Enable Encryption
+
+      │
+
+      ▼
+
+Enable Versioning
+
+      │
+
+      ▼
+
+Upload Sample Object
+
+      │
+
+      ▼
+
+Bucket Ready
 ```
 
 ---
 
-# 🎯 Infrastructure Benefits
+## 🏗️ S3 Architecture
 
-- ✅ Modular Terraform Projects
-- ✅ Production-Ready Architecture
-- ✅ Infrastructure as Code
-- ✅ Secure Networking
-- ✅ Persistent Storage
-- ✅ Secure Authentication
-- ✅ Easy Maintenance
-- ✅ Easy Scaling
-- ✅ Standard Resource Tagging
-- ✅ Reusable Modules
+```text
+Application
+
+      │
+
+      ▼
+
+Amazon S3 Bucket
+
+      │
+
+      ├──────── Images
+
+      ├──────── Documents
+
+      ├──────── Backups
+
+      ├──────── Static Files
+
+      └──────── Logs
+```
+
+---
+
+## 📁 Uploaded Object
+
+Example
+
+```text
+documents/
+
+└── sample.txt
+```
+
+---
+
+## 🔒 Bucket Security
+
+- Server Side Encryption
+- Versioning Enabled
+- Terraform Managed
+- Globally Unique Bucket Name
+
+---
+
+## 🔍 Verify in AWS Console
+
+Navigate to
+
+```text
+AWS Console
+
+↓
+
+Amazon S3
+
+↓
+
+Bucket
+```
+
+Verify
+
+- Bucket Created
+- Encryption Enabled
+- Versioning Enabled
+- Sample Object Uploaded
+
+---
+
+## 📤 Example Outputs
+
+Terraform outputs
+
+- Bucket Name
+- Bucket ARN
+- Bucket Region
+- Object URL
+- Public URL
+- S3 URI
+
+---
+
+## ✅ S3 Benefits
+
+- Highly Durable
+- Highly Available
+- Low Cost Storage
+- Secure Object Storage
+- Versioning
+- Encryption
+- Easy Backup
+- Static Website Support
+
+---
+
+## 🔄 EC2 + EBS + S3 Integration
+
+```text
+                EC2 Instance
+                     │
+        ┌────────────┴─────────────┐
+        ▼                          ▼
+
+ Root EBS                  Additional EBS
+
+        │                          │
+
+        └────────────┬─────────────┘
+                     ▼
+
+              Application Data
+
+                     │
+
+                     ▼
+
+              Amazon S3 Bucket
+
+                     │
+
+        ┌────────────┼─────────────┐
+
+        ▼            ▼             ▼
+
+    Documents      Images      Backups
+```
+
+---
+
+## 🎯 Best Practices
+
+- Use **gp3** volumes for better performance and predictable costs.
+- Encrypt all EBS volumes and S3 buckets.
+- Enable S3 versioning to protect against accidental deletion.
+- Take regular EBS snapshots before major updates.
+- Use lifecycle policies in S3 for long-term cost optimization.
+- Keep application data on EBS and backups or static assets in S3.
+
+---
+# ⚖️ Application Load Balancer (ALB)
+
+Application Load Balancer (ALB) distributes incoming HTTP/HTTPS traffic across multiple Amazon EC2 instances to improve application availability, scalability, and fault tolerance.
+
+In this project, the ALB is deployed across two public subnets and forwards requests to a Target Group containing EC2 instances.
+
+---
+
+## 🎯 Purpose
+
+- High Availability
+- Load Distribution
+- Fault Tolerance
+- Health Monitoring
+- Automatic Target Registration
+- SSL/TLS Ready
+- Internet-Facing Application Access
+
+---
+
+## 📦 Resources Created
+
+- Application Load Balancer
+- ALB Security Group
+- Target Group
+- HTTP Listener
+- Target Group Attachment
+
+---
+
+## ⚙️ ALB Configuration
+
+| Property | Value |
+|----------|-------|
+| Type | Application Load Balancer |
+| Scheme | Internet Facing |
+| IP Type | IPv4 |
+| Listener | HTTP (80) |
+| Target Type | Instance |
+| Health Check | HTTP |
+
+---
+
+# 🔄 ALB Workflow
+
+```text
+Internet
+
+      │
+
+      ▼
+
+Application Load Balancer
+
+      │
+
+      ▼
+
+HTTP Listener
+
+      │
+
+      ▼
+
+Target Group
+
+      │
+
+      ▼
+
+Healthy EC2 Instances
+```
+
+---
+
+# 🏗️ ALB Architecture
+
+```text
+                    Internet
+
+                        │
+
+                        ▼
+
+        Application Load Balancer
+
+                        │
+
+                        ▼
+
+                HTTP Listener (80)
+
+                        │
+
+                        ▼
+
+                 Target Group
+
+            ┌───────────┴───────────┐
+
+            ▼                       ▼
+
+      EC2 Instance 1          EC2 Instance 2
+```
+
+---
+
+# ❤️ Health Check Process
+
+ALB continuously verifies application availability.
+
+```text
+ALB
+
+↓
+
+Target Group
+
+↓
+
+Health Check
+
+↓
+
+Healthy ?
+
+├── Yes → Forward Traffic
+
+└── No → Stop Sending Traffic
+```
+
+---
+
+## 🔍 Verify in AWS Console
+
+Navigate to
+
+```text
+AWS Console
+
+↓
+
+EC2
+
+↓
+
+Load Balancers
+```
+
+Verify
+
+- ALB Created
+- Status = Active
+- Listener Running
+- DNS Name Available
+
+---
+
+Target Group
+
+```text
+EC2
+
+↓
+
+Target Groups
+```
+
+Verify
+
+- Registered Targets
+- Healthy Targets
+- Health Check Status
+
+---
+
+## 🌍 Test the Application
+
+Open
+
+```text
+http://<ALB-DNS>
+```
+
+Example
+
+```text
+http://won-bills-alb.ap-south-1.elb.amazonaws.com
+```
+
+If your application is deployed on the EC2 instances and listening on the configured port, the ALB DNS name should serve the application.
+
+---
+
+## ✅ Benefits
+
+- High Availability
+- Automatic Traffic Distribution
+- Health Monitoring
+- Zero Downtime Deployments
+- SSL Ready
+- Scalable Architecture
+
+---
+
+# 📈 Auto Scaling Group (ASG)
+
+Auto Scaling Group automatically launches and terminates EC2 instances based on demand, helping maintain application availability and optimize costs.
+
+This project uses a Launch Template, integrates with the ALB Target Group, and scales instances using CloudWatch alarms.
+
+---
+
+## 🎯 Purpose
+
+- Automatic Scaling
+- High Availability
+- Self Healing Infrastructure
+- Cost Optimization
+- Load Based Scaling
+
+---
+
+## 📦 Resources Created
+
+- Launch Template
+- Auto Scaling Group
+- CloudWatch Alarms
+- Scale Out Policy
+- Scale In Policy
+
+---
+
+## ⚙️ ASG Configuration
+
+| Property | Value |
+|----------|-------|
+| Instance Type | t3.micro |
+| Desired Capacity | 2 |
+| Minimum Capacity | 2 |
+| Maximum Capacity | 4 |
+| Health Check | ELB |
+| Launch Template | Enabled |
+
+---
+
+# 🚀 Launch Template
+
+The Launch Template defines how every new EC2 instance should be created.
+
+It includes:
+
+- Ubuntu AMI
+- Instance Type
+- Security Group
+- SSH Key Pair
+- Root EBS Volume
+- User Data Script
+- Monitoring Configuration
+
+Whenever Auto Scaling launches a new instance, it uses this template automatically.
+
+---
+
+# 🔄 ASG Workflow
+
+```text
+CloudWatch
+
+      │
+
+      ▼
+
+CPU Monitoring
+
+      │
+
+      ▼
+
+Auto Scaling Group
+
+      │
+
+      ├──────── CPU High
+
+      │
+
+      ▼
+
+Launch New EC2
+
+      │
+
+      ▼
+
+Register with Target Group
+
+      │
+
+      ▼
+
+ALB Starts Routing Traffic
+```
+
+---
+
+# 📉 Scale In Workflow
+
+```text
+CloudWatch
+
+      │
+
+      ▼
+
+CPU Low
+
+      │
+
+      ▼
+
+Scale In Policy
+
+      │
+
+      ▼
+
+Terminate EC2
+
+      │
+
+      ▼
+
+Remove From Target Group
+```
+
+---
+
+# 📊 CloudWatch Monitoring
+
+Two alarms are configured.
+
+### High CPU Alarm
+
+Trigger
+
+```text
+CPU >= 70%
+```
+
+Action
+
+```text
+Launch one EC2 Instance
+```
+
+---
+
+### Low CPU Alarm
+
+Trigger
+
+```text
+CPU <= 20%
+```
+
+Action
+
+```text
+Terminate one EC2 Instance
+```
+
+---
+
+# 🏗️ Complete Scaling Architecture
+
+```text
+                 Internet
+
+                     │
+
+                     ▼
+
+          Application Load Balancer
+
+                     │
+
+                     ▼
+
+              Target Group
+
+                     │
+
+         ┌───────────┴───────────┐
+
+         ▼                       ▼
+
+   EC2 Instance            EC2 Instance
+
+         ▲                       ▲
+
+         └───────────┬───────────┘
+
+                     │
+
+             Auto Scaling Group
+
+                     │
+
+              Launch Template
+
+                     │
+
+                CloudWatch
+
+          ┌──────────┴──────────┐
+
+          ▼                     ▼
+
+     High CPU Alarm        Low CPU Alarm
+
+          │                     │
+
+          ▼                     ▼
+
+      Scale Out             Scale In
+```
+
+---
+
+## 🔍 Verify in AWS Console
+
+Navigate to
+
+```text
+AWS Console
+
+↓
+
+EC2
+
+↓
+
+Auto Scaling Groups
+```
+
+Verify
+
+- Auto Scaling Group Created
+- Desired Capacity
+- Minimum Capacity
+- Maximum Capacity
+
+---
+
+Launch Templates
+
+```text
+EC2
+
+↓
+
+Launch Templates
+```
+
+Verify
+
+- Launch Template
+- Latest Version
+- AMI
+- Instance Type
+- User Data
+
+---
+
+CloudWatch
+
+```text
+AWS Console
+
+↓
+
+CloudWatch
+
+↓
+
+Alarms
+```
+
+Verify
+
+- High CPU Alarm
+- Low CPU Alarm
+- Alarm State
+
+---
+
+## 🧪 Test Auto Scaling
+
+1. Generate CPU load on one instance.
+2. Wait for the High CPU alarm to trigger.
+3. Confirm a new EC2 instance is launched.
+4. Verify it registers automatically with the Target Group.
+5. Reduce CPU usage.
+6. Confirm the Low CPU alarm terminates an instance after the cooldown period.
+
+---
+
+## ✅ Benefits
+
+- Automatic Recovery
+- Automatic Scaling
+- High Availability
+- Cost Optimization
+- Zero Downtime
+- CloudWatch Integration
+- Production Ready
+- Fully Automated Infrastructure
 
 ---
 # 🚀 Deployment Guide
 
-Follow these steps to deploy any Terraform module in this repository.
+Follow the deployment sequence below to provision the complete AWS infrastructure successfully.
 
 ---
 
-# 📌 Step 1 — Clone Repository
+## 📌 Deployment Order
 
-Clone the repository to your local machine.
+```text
+1️⃣ Amazon VPC
 
-```bash
-git clone https://github.com/<your-username>/terraform-office.git
-```
+        │
 
-Navigate into the repository.
+        ▼
 
-```bash
-cd terraform-office
-```
+2️⃣ Security Groups
 
----
+        │
 
-# 📌 Step 2 — Choose a Project
+        ▼
 
-Navigate to the AWS service you want to deploy.
+3️⃣ IAM
 
-Example
+        │
 
-```bash
-cd EC2
-```
+        ▼
 
-or
+4️⃣ Amazon EC2
 
-```bash
-cd VPC
-```
+        │
 
-or
+        ▼
 
-```bash
-cd S3
-```
+5️⃣ Amazon EBS
 
-or
+        │
 
-```bash
-cd IAM
-```
+        ▼
 
-or
+6️⃣ Amazon S3
 
-```bash
-cd Security-Groups
-```
+        │
 
-or
+        ▼
 
-```bash
-cd EBS
+7️⃣ Application Load Balancer
+
+        │
+
+        ▼
+
+8️⃣ Auto Scaling Group
 ```
 
 ---
 
-# 📌 Step 3 — Configure Variables
+# ⚙️ Terraform Commands
 
-Update the `terraform.tfvars` file.
+Each project follows the same Terraform workflow.
 
-Example
-
-```hcl
-aws_region = "ap-south-1"
-
-project_name = "WON Bills"
-
-environment = "dev"
-```
-
----
-
-# 📌 Step 4 — Configure AWS Credentials
-
-Either configure the AWS CLI:
-
-```bash
-aws configure
-```
-
-or create a `.env` file:
-
-```env
-AWS_ACCESS_KEY_ID=xxxxxxxxxxxxxxxx
-
-AWS_SECRET_ACCESS_KEY=xxxxxxxxxxxxxxxx
-
-AWS_REGION=ap-south-1
-```
-
----
-
-# 📌 Step 5 — Initialize Terraform
-
-Initialize the project.
+## 1️⃣ Initialize Terraform
 
 ```bash
 terraform init
 ```
 
-Terraform downloads all required providers.
-
-Example
-
-```text
-AWS Provider
-
-TLS Provider
-
-Random Provider
-
-Local Provider
-```
+Downloads the required providers and initializes the working directory.
 
 ---
 
-# 📌 Step 6 — Format Terraform Files
+## 2️⃣ Format Terraform Files
 
 ```bash
 terraform fmt
 ```
 
-Purpose
-
-- Standard formatting
-- Easy readability
-- Best practice before commit
+Formats all Terraform files according to Terraform standards.
 
 ---
 
-# 📌 Step 7 — Validate Configuration
+## 3️⃣ Validate Configuration
 
 ```bash
 terraform validate
 ```
 
-Example Output
-
-```text
-Success!
-
-The configuration is valid.
-```
+Checks the configuration for syntax and logical errors.
 
 ---
 
-# 📌 Step 8 — Review Infrastructure
+## 4️⃣ Review Execution Plan
 
 ```bash
 terraform plan
 ```
 
-Terraform displays all resources that will be created.
-
-Example
-
-```text
-Plan:
-
-12 to add
-
-0 to change
-
-0 to destroy
-```
+Displays the infrastructure changes Terraform will make before deployment.
 
 ---
 
-# 📌 Step 9 — Deploy Infrastructure
-
-Interactive Deployment
+## 5️⃣ Deploy Infrastructure
 
 ```bash
 terraform apply
 ```
 
-Automatic Deployment
+or
 
 ```bash
 terraform apply -auto-approve
 ```
 
-Terraform creates the AWS infrastructure.
+Creates all AWS resources.
 
 ---
 
-# 📌 Step 10 — Display Outputs
+## 6️⃣ View Outputs
 
 ```bash
 terraform output
 ```
 
-Example
+Displays useful information such as:
 
-```text
-EC2 Public IP
-
-Elastic IP
-
-VPC ID
-
-Bucket Name
-
-IAM Role ARN
-
-Security Group ID
-
-Volume ID
-```
+- Resource IDs
+- Public IPs
+- ARNs
+- DNS Names
+- Bucket Names
+- Launch Template IDs
+- Auto Scaling Group Names
 
 ---
 
-# 📌 Step 11 — View Terraform State
-
-```bash
-terraform show
-```
-
-Displays
-
-- Resources
-- Dependencies
-- Outputs
-- Current State
-
----
-
-# 📌 Step 12 — List Managed Resources
-
-```bash
-terraform state list
-```
-
-Example
-
-```text
-aws_instance.server
-
-aws_vpc.main
-
-aws_s3_bucket.bucket
-
-aws_iam_role.role
-
-aws_security_group.web
-```
-
----
-
-# 📌 Step 13 — Destroy Infrastructure
-
-Interactive
+## 7️⃣ Destroy Infrastructure
 
 ```bash
 terraform destroy
 ```
 
-Automatic
+or
 
 ```bash
 terraform destroy -auto-approve
 ```
 
-Deletes all resources created by Terraform.
+Deletes all resources managed by the current Terraform project.
 
 ---
 
-# ⚙️ Terraform Command Reference
+# 🗑️ Destroy Complete Repository
 
-| Command | Description |
-|----------|-------------|
-| `terraform version` | Show installed Terraform version |
-| `terraform fmt` | Format Terraform files |
-| `terraform fmt -recursive` | Format all Terraform files recursively |
-| `terraform init` | Initialize Terraform project |
-| `terraform init -upgrade` | Upgrade provider plugins |
-| `terraform validate` | Validate Terraform configuration |
-| `terraform plan` | Preview infrastructure changes |
-| `terraform plan -out=tfplan` | Save execution plan |
-| `terraform apply` | Apply infrastructure changes |
-| `terraform apply -auto-approve` | Apply without confirmation |
-| `terraform output` | Display outputs |
-| `terraform show` | Display current state |
-| `terraform state list` | List managed resources |
-| `terraform state show <resource>` | Display a specific resource |
-| `terraform providers` | List configured providers |
-| `terraform workspace list` | List workspaces |
-| `terraform workspace new <name>` | Create a workspace |
-| `terraform workspace select <name>` | Switch workspace |
-| `terraform graph` | Display dependency graph |
-| `terraform destroy` | Destroy infrastructure |
-| `terraform destroy -auto-approve` | Destroy without confirmation |
-
----
-
-# 🔄 Complete Terraform Workflow
+Destroy resources in reverse dependency order.
 
 ```text
-Write Terraform Code
-        │
-        ▼
-terraform fmt
-        │
-        ▼
-terraform init
-        │
-        ▼
-terraform validate
-        │
-        ▼
-terraform plan
-        │
-        ▼
-terraform apply
-        │
-        ▼
-terraform output
-        │
-        ▼
-terraform show
-        │
-        ▼
-terraform destroy
+Auto Scaling Group
+
+↓
+
+Application Load Balancer
+
+↓
+
+Amazon S3
+
+↓
+
+Amazon EBS
+
+↓
+
+Amazon EC2
+
+↓
+
+IAM
+
+↓
+
+Security Groups
+
+↓
+
+Amazon VPC
 ```
 
 ---
 
-# 💡 Best Practices During Deployment
+# 🔍 AWS Verification Checklist
 
-- Always run `terraform fmt` before committing code.
-- Validate the configuration before creating resources.
-- Review the execution plan before applying changes.
-- Store sensitive values outside the repository.
-- Use descriptive resource names and tags.
-- Use remote state storage for production environments.
-- Keep provider versions updated.
-- Destroy temporary infrastructure to avoid unnecessary AWS costs.
-
----
-# 📁 Terraform File Explanation
-
-Each Terraform project follows a consistent file structure to improve readability, maintenance, and reusability.
-
-| File | Purpose |
-|------|---------|
-| `versions.tf` | Defines the required Terraform version and provider versions. |
-| `provider.tf` | Configures the AWS provider and default resource tags. |
-| `variables.tf` | Declares reusable input variables. |
-| `terraform.tfvars` | Provides values for variables. |
-| `network.tf` | Creates networking resources such as VPC, Subnets, IGW, and Route Tables. |
-| `compute.tf` | Creates the EC2 instance and related resources. |
-| `keypair.tf` | Generates and uploads the EC2 SSH key pair. |
-| `userdata.sh` | Installs software automatically during EC2 launch. |
-| `security-group.tf` | Creates Security Groups and firewall rules. |
-| `iam.tf` | Creates IAM Users, Roles, Groups, and Policies. |
-| `s3.tf` | Creates Amazon S3 buckets and related configurations. |
-| `ebs.tf` | Creates and attaches EBS volumes to EC2 instances. |
-| `outputs.tf` | Displays important resource information after deployment. |
-| `.gitignore` | Excludes sensitive and generated files from Git. |
-| `README.md` | Project documentation and deployment guide. |
+After deployment verify each service in the AWS Console.
 
 ---
 
-# 📂 Example Folder Structure
-
-```text
-terraform-office/
-│
-├── EC2/
-│
-├── VPC/
-│
-├── S3/
-│
-├── IAM/
-│
-├── Security-Groups/
-│
-├── EBS/
-│
-├── ALB/                 (Upcoming)
-│
-├── ASG/                 (Upcoming)
-│
-├── README.md
-│
-└── .gitignore
-```
-
----
-
-# 📤 Example Outputs
-
-After a successful deployment, Terraform displays useful outputs.
-
-### EC2
-
-```text
-Instance ID
-
-Public IP
-
-Private IP
-
-Elastic IP
-
-SSH Command
-```
-
-### VPC
-
-```text
-VPC ID
-
-Public Subnet ID
-
-Private Subnet ID
-
-Internet Gateway ID
-
-Route Table ID
-```
-
-### S3
-
-```text
-Bucket Name
-
-Bucket ARN
-
-Bucket Region
-
-Object URL
-```
-
-### IAM
-
-```text
-IAM User ARN
-
-IAM Role ARN
-
-IAM Policy ARN
-
-Instance Profile
-```
-
-### Security Groups
-
-```text
-Web Security Group ID
-
-Application Security Group ID
-
-Database Security Group ID
-```
-
-### EBS
-
-```text
-Volume ID
-
-Snapshot ID
-
-Device Name
-
-Volume Size
-
-IOPS
-
-Throughput
-```
-
----
-
-# 🛠 Troubleshooting
-
-## Terraform Initialization Error
-
-```text
-Provider installation failed
-```
-
-### Solution
-
-```bash
-terraform init
-```
-
----
-
-## Configuration Validation Error
-
-```text
-Configuration is invalid
-```
-
-### Solution
-
-```bash
-terraform validate
-```
-
----
-
-## Invalid AWS Credentials
-
-```text
-InvalidClientTokenId
-```
-
-### Solution
-
-- Verify AWS Access Key
-- Verify AWS Secret Key
-- Verify AWS Region
-
----
-
-## S3 Bucket Already Exists
-
-```text
-BucketAlreadyExists
-```
-
-### Solution
-
-Amazon S3 bucket names are globally unique. Use a unique bucket name.
-
----
-
-## Invalid VPC ID
-
-```text
-InvalidVpcID.NotFound
-```
-
-### Solution
-
-Verify the VPC exists in the selected AWS Region or use the correct VPC ID.
-
----
-
-## EBS Attachment Error
-
-```text
-Attachment point already in use
-```
-
-### Solution
-
-Attach the EBS volume using an unused device name such as:
-
-```text
-/dev/sdg
-
-/dev/sdh
-
-/dev/sdi
-```
-
----
-
-## Security Group Error
-
-```text
-InvalidGroup.NotFound
-```
-
-### Solution
-
-Ensure the VPC ID is correct and the Security Group exists in the same region.
-
----
-
-# 🛡 Best Practices
-
-## Terraform
-
-- Use Infrastructure as Code (IaC)
-- Keep modules independent
-- Use reusable variables
-- Always run `terraform fmt`
-- Validate before deployment
-- Review the execution plan
-- Store state securely
-- Use remote backends in production
-
----
-
-## AWS
-
-- Follow the Principle of Least Privilege (IAM)
-- Use Security Groups instead of opening all ports
-- Encrypt EBS volumes
-- Enable S3 Versioning
-- Enable Server-Side Encryption
-- Use IAM Roles for EC2
-- Apply consistent tags to all resources
-- Delete unused infrastructure to reduce costs
-
----
-
-# 📈 Project Roadmap
-
-## ✅ Completed
-
-- Amazon EC2
-- Amazon VPC
-- Amazon S3
-- AWS IAM
-- Security Groups
-- Amazon EBS
-
----
-
-## 🚧 Upcoming
-
-- Application Load Balancer (ALB)
-- Auto Scaling Group (ASG)
-- Route 53
-- ACM Certificates
-- CloudWatch
-- SNS
-- Lambda
-- RDS
-- CloudFront
-- WAF
-
----
-
-# 📊 Repository Progress
-
-| Module | Status |
-|---------|:------:|
-| Amazon EC2 | ✅ Completed |
-| Amazon VPC | ✅ Completed |
-| Amazon S3 | ✅ Completed |
-| AWS IAM | ✅ Completed |
-| Security Groups | ✅ Completed |
-| Amazon EBS | ✅ Completed |
-| Application Load Balancer | 🚧 Planned |
-| Auto Scaling Group | 🚧 Planned |
-
----
-
-# 💻 Technologies Used
-
-## Infrastructure as Code
-
-- Terraform
-
-## Cloud Platform
-
-- Amazon Web Services (AWS)
-
-## Compute
-
-- Amazon EC2
-
-## Networking
-
-- Amazon VPC
+## 🌐 Amazon VPC
+
+- VPC Created
+- Public Subnets
+- Private Subnets
 - Internet Gateway
 - Route Tables
-- Security Groups
-
-## Storage
-
-- Amazon EBS
-- Amazon S3
-
-## Identity & Security
-
-- AWS IAM
-
-## Operating System
-
-- Ubuntu 24.04 LTS
-
-## Tools
-
-- Git
-- Docker
-- Docker Compose
-- Java 17
-- Node.js
-- PM2
-- AWS CLI
 
 ---
 
-# 🤝 Contributing
+## 🛡️ Security Groups
 
-Contributions are welcome.
+- Web Security Group
+- Application Security Group
+- Database Security Group
 
-1. Fork the repository.
-2. Create a feature branch.
-3. Commit your changes.
-4. Push to your branch.
-5. Create a Pull Request.
+---
+
+## 🔐 IAM
+
+- IAM User
+- Access Keys
+- Console Login
+- Policies
+
+---
+
+## 🖥️ Amazon EC2
+
+- Ubuntu Instance Running
+- Elastic IP Attached
+- Security Group Attached
+- Key Pair Assigned
+- UserData Executed
+
+---
+
+## 💾 Amazon EBS
+
+- Root Volume
+- Additional Volume
+- Snapshot
+- Attached to EC2
+
+---
+
+## 🪣 Amazon S3
+
+- Bucket Created
+- Encryption Enabled
+- Versioning Enabled
+- Object Uploaded
+
+---
+
+## ⚖️ Application Load Balancer
+
+- ALB Active
+- Listener Running
+- Target Group Healthy
+- ALB DNS Accessible
+
+---
+
+## 📈 Auto Scaling Group
+
+- Launch Template
+- ASG Created
+- Desired Capacity
+- Minimum Capacity
+- Maximum Capacity
+- CloudWatch Alarms
+- Scale Policies
+
+---
+
+# 📋 Expected Outputs
+
+Each project produces useful Terraform outputs.
+
+Examples include:
+
+- VPC ID
+- Subnet IDs
+- Internet Gateway ID
+- Security Group IDs
+- IAM User
+- Access Key
+- EC2 Instance ID
+- Elastic IP
+- SSH Command
+- Root Volume ID
+- EBS Volume ID
+- Snapshot ID
+- Bucket Name
+- Bucket ARN
+- Object URL
+- ALB DNS Name
+- Target Group ARN
+- Launch Template ID
+- Auto Scaling Group Name
+- CloudWatch Alarm Names
+
+---
+
+# 🛠️ Troubleshooting
+
+## Terraform Initialization
+
+```bash
+terraform init
+```
+
+Problem
+
+```text
+Provider not found
+```
+
+Solution
+
+```bash
+terraform init -upgrade
+```
+
+---
+
+## Validation Errors
+
+```bash
+terraform validate
+```
+
+Problem
+
+```text
+Unexpected attribute
+```
+
+Solution
+
+Check
+
+- variables.tf
+- terraform.tfvars
+
+Ensure every variable exists.
+
+---
+
+## Plan Errors
+
+Problem
+
+```text
+Reference not found
+```
+
+Solution
+
+Verify
+
+- Resource Names
+- Variable Names
+- Outputs
+
+---
+
+## Apply Errors
+
+Problem
+
+```text
+Resource already exists
+```
+
+Solution
+
+- Import the resource
+- Delete duplicate resources
+- Update Terraform State
+
+---
+
+## EC2 SSH Issues
+
+Verify
+
+- Security Group allows Port 22
+- Elastic IP is attached
+- Correct Key Pair
+- SSH Command
+
+Example
+
+```bash
+ssh -i keys/won-bills-key.pem ubuntu@<Elastic-IP>
+```
+
+---
+
+## ALB Health Check Failure
+
+Verify
+
+- EC2 Running
+- Application Running
+- Listener Port
+- Target Group Port
+- Security Group Rules
+
+---
+
+## Auto Scaling Issues
+
+Verify
+
+- Launch Template
+- AMI
+- Key Pair
+- Target Group
+- Subnets
+- Security Group
+
+---
+
+## S3 Upload Issues
+
+Verify
+
+- Bucket Exists
+- Region Correct
+- IAM Permissions
+- Bucket Policy
+
+---
+
+# 🔐 Best Practices
+
+- Keep Terraform State Secure
+- Never Commit Secrets
+- Use Remote State in Production
+- Enable State Locking
+- Encrypt EBS Volumes
+- Enable S3 Versioning
+- Apply Least Privilege IAM Policies
+- Use Security Groups Carefully
+- Tag Every Resource
+- Keep Modules Independent
+- Validate Before Apply
+- Review Plan Before Deployment
+- Destroy Unused Infrastructure
+- Rotate IAM Credentials
+- Enable Multi-Factor Authentication
+
+---
+
+# 📚 Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| Terraform | Infrastructure as Code |
+| Amazon Web Services | Cloud Platform |
+| Ubuntu 24.04 | Operating System |
+| Amazon VPC | Networking |
+| Security Groups | Firewall |
+| IAM | Identity Management |
+| EC2 | Compute |
+| EBS | Block Storage |
+| S3 | Object Storage |
+| ALB | Load Balancing |
+| ASG | Auto Scaling |
+| CloudWatch | Monitoring |
 
 ---
 
@@ -1758,28 +2486,270 @@ Contributions are welcome.
 
 **Manohar**
 
-**Project:** Terraform AWS Infrastructure Repository
+**Cloud & DevOps Engineer**
 
-**Cloud Platform:** Amazon Web Services (AWS)
+### Skills
 
-**Infrastructure as Code:** Terraform
+- Terraform
+- Amazon Web Services
+- Linux
+- Docker
+- Kubernetes
+- Jenkins
+- GitHub Actions
+- Nginx
+- CI/CD
+- Infrastructure as Code
+
+---
+
+# ⭐ Repository Highlights
+
+✅ Production Ready
+
+✅ Modular Terraform Design
+
+✅ Infrastructure as Code
+
+✅ AWS Best Practices
+
+✅ Secure Architecture
+
+✅ High Availability
+
+✅ Automatic Scaling
+
+✅ Fully Documented
+
+✅ Easy to Learn
+
+✅ Easy to Maintain
+
+---
+
+# 🤝 Contributing
+
+Contributions, suggestions, and improvements are welcome.
+
+If you find an issue or have an enhancement, feel free to open an Issue or submit a Pull Request.
 
 ---
 
 # 📄 License
 
-This project is intended for learning, internal infrastructure automation, and demonstration of Terraform-based AWS deployments.
+This project is licensed under the MIT License.
 
 ---
 
 <div align="center">
 
-# ⭐ Thank You
+## ⭐ If you found this repository helpful, consider giving it a Star!
 
-If you found this repository useful, consider giving it a ⭐ on GitHub.
+**Happy Learning • Happy Terraforming • Happy Cloud Computing ☁️🚀**
 
-### 🚀 Happy Terraforming!
+</div>
+# 📊 Complete AWS Infrastructure Summary
 
-Built with ❤️ using **Terraform** and **Amazon Web Services**
+| Module | AWS Service | Purpose | Status |
+|---------|-------------|:--------|:------:|
+| 01 | Amazon VPC | Networking | ✅ |
+| 02 | Security Groups | Firewall | ✅ |
+| 03 | IAM | Identity & Access Management | ✅ |
+| 04 | EC2 | Virtual Server | ✅ |
+| 05 | EBS | Block Storage | ✅ |
+| 06 | S3 | Object Storage | ✅ |
+| 07 | Application Load Balancer | Traffic Distribution | ✅ |
+| 08 | Auto Scaling Group | Automatic Scaling | ✅ |
+
+---
+
+# 🔄 Complete Infrastructure Flow
+
+```text
+                 User Request
+
+                      │
+
+                      ▼
+
+                 Internet
+
+                      │
+
+                      ▼
+
+             Internet Gateway
+
+                      │
+
+                      ▼
+
+        Application Load Balancer
+
+                      │
+
+                      ▼
+
+               Target Group
+
+          ┌───────────┴───────────┐
+
+          ▼                       ▼
+
+     EC2 Instance 1          EC2 Instance 2
+
+          ▲                       ▲
+
+          └──────────┬────────────┘
+
+                     ▼
+
+          Auto Scaling Group
+
+                     ▼
+
+            Launch Template
+
+                     ▼
+
+       Security Group + UserData
+
+                     ▼
+
+           Root EBS + Extra EBS
+
+                     ▼
+
+                 Amazon S3
+
+                     ▼
+
+              CloudWatch Alarms
+
+                     ▼
+
+            Scale Out / Scale In
+```
+
+---
+
+# 📁 Project Execution Order
+
+| Step | Module | Execute |
+|------|---------|---------|
+| 1 | VPC | ✅ |
+| 2 | Security Groups | ✅ |
+| 3 | IAM | ✅ |
+| 4 | EC2 | ✅ |
+| 5 | EBS | ✅ |
+| 6 | S3 | ✅ |
+| 7 | ALB | ✅ |
+| 8 | ASG | ✅ |
+
+---
+
+# 🗑️ Destroy Order
+
+Always destroy resources in reverse dependency order.
+
+```text
+ASG
+
+↓
+
+ALB
+
+↓
+
+S3
+
+↓
+
+EBS
+
+↓
+
+EC2
+
+↓
+
+IAM
+
+↓
+
+Security Groups
+
+↓
+
+VPC
+```
+
+---
+
+# 📌 Repository Features
+
+- ✅ Modular Terraform Projects
+- ✅ Independent State Files
+- ✅ AWS Best Practices
+- ✅ Production-Ready Architecture
+- ✅ Infrastructure as Code (IaC)
+- ✅ Secure Networking
+- ✅ Automatic Scaling
+- ✅ Load Balancing
+- ✅ Persistent Storage
+- ✅ Object Storage
+- ✅ Cloud Monitoring
+- ✅ Easy Deployment
+- ✅ Easy Cleanup
+- ✅ Reusable Configuration
+- ✅ GitHub Portfolio Ready
+
+---
+
+# 🏆 Learning Outcomes
+
+After completing this repository you will understand:
+
+- Amazon VPC
+- Public & Private Subnets
+- Route Tables
+- Internet Gateway
+- Security Groups
+- IAM Users & Access Keys
+- EC2
+- Elastic IP
+- User Data
+- EBS Volumes
+- EBS Snapshots
+- Amazon S3
+- ALB
+- Target Groups
+- Listeners
+- Launch Templates
+- Auto Scaling Groups
+- CloudWatch Alarms
+- Terraform Variables
+- Terraform Outputs
+- Terraform Data Sources
+- Terraform Dependencies
+- Infrastructure as Code Best Practices
+
+---
+
+# ⭐ Final Result
+
+This repository demonstrates a complete AWS infrastructure built with Terraform, including networking, security, identity, compute, storage, load balancing, monitoring, and automatic scaling.
+
+It serves as a practical DevOps portfolio project and a reusable foundation for deploying production-style AWS environments.
+
+---
+
+<div align="center">
+
+## 🚀 Built with Terraform & AWS
+
+**Infrastructure as Code • DevOps • Cloud Engineering**
+
+⭐ **If you found this repository useful, please consider starring it on GitHub!**
 
 </div>
